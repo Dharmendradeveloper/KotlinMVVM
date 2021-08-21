@@ -1,0 +1,2 @@
+rootProject.name = "KotlinMvvmUsingDataBindingViewModelAndLiveData"
+include ':app'

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="country">Country:</string>
+    <string name="total_confirmed">Total Confirmed:</string>
+    <string name="random_data">32435465475</string>
+    <string name="total_deaths">Total Deaths:</string>
+    <string name="total_recovered">Total Recovered:</string>
+</resources>

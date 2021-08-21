@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="modeldata"
+            type="com.assignmentwzd.fetchcoronadetails.data.model.RequiredData" />
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ten_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/ten_dp"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@color/black"-->
+<!--            tools:background="@tools:sample/backgrounds/scenic"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txtCountryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/country"/>
+
+            <TextView
+                android:id="@+id/txtCountryName"
+                android:layout_toEndOf="@id/txtCountryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:textColor="#000"
+                android:text="@{modeldata.country}"
+                tools:text="Country:"/>
+
+            <TextView
+                android:id="@+id/txtConfirmTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtCountryTitle"
+                android:textColor="#000"
+                android:text="@string/total_confirmed"/>
+
+            <TextView
+                android:id="@+id/txtConfirmCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:layout_toEndOf="@id/txtConfirmTitle"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtCountryName"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:textColor="#000"
+                android:text="@{modeldata.total_confirmed}"
+                tools:text="@string/random_data"/>
+
+
+            <TextView
+                android:id="@+id/txtTotalDeathsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_below="@+id/txtConfirmTitle"
+                android:textColor="#000"
+                android:text="@string/total_deaths"/>
+
+            <TextView
+                android:id="@+id/txtTotalDeaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:layout_toEndOf="@+id/txtTotalDeathsTitle"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_below="@+id/txtConfirmCases"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:textColor="#000"
+                android:text="@{modeldata.total_death}"
+                tools:text="@string/random_data"/>
+
+            <TextView
+                android:id="@+id/txtRecoveredTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_below="@+id/txtTotalDeathsTitle"
+                android:textColor="#000"
+                android:text="@string/total_recovered"/>
+
+            <TextView
+                android:id="@+id/txtRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size"
+                android:layout_toEndOf="@id/txtRecoveredTitle"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_below="@+id/txtTotalDeaths"
+                android:layout_marginStart="@dimen/ten_dp"
+                android:textColor="#000"
+                android:text="@{modeldata.total_recover}"
+                tools:text="@string/random_data"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
+</layout>
